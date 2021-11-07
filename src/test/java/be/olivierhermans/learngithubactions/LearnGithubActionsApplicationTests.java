@@ -11,9 +11,4 @@ class LearnGithubActionsApplicationTests {
     @Test
     void contextLoads() {
     }
-
-    @Test
-    void testThatWillFail() {
-        assertThat(true).isFalse();
-    }
 }
