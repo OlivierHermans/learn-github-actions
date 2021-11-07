@@ -25,6 +25,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
   push_to_registry:
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Check out from git
