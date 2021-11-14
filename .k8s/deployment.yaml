@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learn-github-actions-deployment
+  labels:
+    app: learn-github-actions
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: learn-github-actions
+  template:
+    metadata:
+      labels:
+        app: learn-github-actions
+    spec:
+      containers:
+        - name: learn-github-actions
+          image: olivierhermans/learn-github-actions:snapshot
+          ports:
+            - containerPort: 8080

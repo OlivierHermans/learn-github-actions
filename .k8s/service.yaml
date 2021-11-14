@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: learn-github-actions-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: learn-github-actions
+  ports:
+    - port: 8080
+      targetPort: 8080
